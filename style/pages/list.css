@@ -1,0 +1,19 @@
+/* CSS da página list de projetos */
+.df-list >.df-wrapper >.main-content >.title-button{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.df-list >.df-wrapper >.main-content >.title-button >.title{
+    font-size: calc(var(--df-font-size-base) + 30px);
+    font-weight: 700;
+}
+
+.df-list >.df-wrapper >.main-content >.title-button >.button-wrapper{
+
+}
+
+.df-list >.df-wrapper >.main-content >.table-wrapper{
+    margin-top: 32px;
+}

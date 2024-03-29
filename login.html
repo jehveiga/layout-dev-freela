@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Dev Freelancer</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES ITCSS -->
+
+    <!-- SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="style/settings/wrapper.css" />
+    <link rel="stylesheet" type="text/css" href="style/settings/core.css" />
+    <link rel="stylesheet" type="text/css" href="style/settings/color.css" />
+    <link rel="stylesheet" href="style/settings/text.css" />
+    <!-- GENERIC -->
+    <link rel="stylesheet" type="text/css" href="style/generic/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="style/generic/box-sizing.css"
+    />
+    <!-- BASE -->
+    <link rel="stylesheet" type="text/css" href="style/base/html.css" />
+
+    <!-- OBJETCS -->
+    <link rel="stylesheet" href="style/objects/df-wrapper.css" />
+
+    <!-- COMPONENTS -->
+    <link rel="stylesheet" href="style/components/df-button.css" />
+    <link rel="stylesheet" href="style/components/df-input.css" />
+    <link rel="stylesheet" href="style/components/df-radio.css" />
+    <link rel="stylesheet" href="style/components/df-header.css" />
+
+    <!-- PAGES -->
+    <link rel="stylesheet" type="text/css" href="style/pages/login.css" />
+    <!-- TRUMPS -->
+  </head>
+
+  <body>
+    <div class="df-login">
+      <div class="df-wrapper">
+        <header class="df-header">
+          <div class="wrapper">
+            <div class="image-wrapper">
+              <img
+                class="image"
+                src="assets/logo/devfreela.svg"
+                alt="Logo da Dev Freela"
+              />
+            </div>
+          </div>
+        </header>
+        <main class="main-content">
+          <div class="left">
+            <span class="steps">PASSO 1 DE 2</span>
+
+            <h1 class="main-title">
+              <span class="up">Olá</span>
+              <span class="down">Vamos criar seu cadastro.</span>
+            </h1>
+
+            <div class="radio-buttons">
+              <h3 class="title">Qual o seu perfil?</h3>
+              <div class="buttons">
+                <label class="df-radio">
+                  Dev
+                  <input name="cargo" type="radio" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="df-radio">
+                  Client
+                  <input name="cargo" type="radio" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <input type="text" class="df-input" placeholder="Nome completo" />
+            <input
+              type="date"
+              class="df-input"
+              placeholder="Data de nascimento"
+            />
+            <input type="email" class="df-input" placeholder="Email" />
+            <input type="password" class="df-input" placeholder="Senha" />
+
+            <button class="df-button">Continuar</button>
+          </div>
+          <div class="right">
+            <img
+              class="image"
+              src="assets/image/bg-cubes.png"
+              alt="Fundo de decoração com 3 cubos com fundo gradient com multi cores"
+            />
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
