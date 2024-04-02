@@ -41,6 +41,9 @@
     <!-- PAGES -->
     <link rel="stylesheet" type="text/css" href="style/pages/login.css" />
     <!-- TRUMPS -->
+
+    <!-- SCRIPTS -->
+    <script src="scripts/login.js" defer></script>
   </head>
 
   <body>
@@ -58,9 +61,7 @@
           </div>
         </header>
         <main class="main-content">
-          <div class="left">
-            <span class="steps">PASSO 1 DE 2</span>
-
+          <form class="left" onsubmit="cadastrar(event)">
             <h1 class="main-title">
               <span class="up">Olá</span>
               <span class="down">Vamos criar seu cadastro.</span>
@@ -71,7 +72,7 @@
               <div class="buttons">
                 <label class="df-radio">
                   Dev
-                  <input name="cargo" type="radio" />
+                  <input name="cargo" type="radio" checked />
                   <span class="checkmark"></span>
                 </label>
 
@@ -82,17 +83,37 @@
                 </label>
               </div>
             </div>
-            <input type="text" class="df-input" placeholder="Nome completo" />
             <input
+              id="fullName"
+              required
+              type="text"
+              class="df-input"
+              placeholder="Nome completo"
+            />
+            <input
+              id="birthDate"
+              required
               type="date"
               class="df-input"
               placeholder="Data de nascimento"
             />
-            <input type="email" class="df-input" placeholder="Email" />
-            <input type="password" class="df-input" placeholder="Senha" />
+            <input
+              id="email"
+              required
+              type="email"
+              class="df-input"
+              placeholder="Email"
+            />
+            <input
+              id="password"
+              required
+              type="password"
+              class="df-input"
+              placeholder="Senha"
+            />
 
-            <button class="df-button">Continuar</button>
-          </div>
+            <button type="submit" class="df-button">Continuar</button>
+          </form>
           <div class="right">
             <img
               class="image"

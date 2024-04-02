@@ -41,12 +41,19 @@
     <link rel="stylesheet" href="style/components/df-header.css" />
 
     <!-- PAGES -->
-    <link rel="stylesheet" type="text/css" href="style/pages/create.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="style/pages/project-create-edit.css"
+    />
     <!-- TRUMPS -->
+
+    <!-- SCRIPTS -->
+    <script src="scripts/project-create-edit.js" defer></script>
   </head>
 
   <body>
-    <div class="df-create">
+    <div class="df-project-create-edit">
       <div class="df-wrapper">
         <header class="df-header">
           <div class="wrapper">
@@ -64,7 +71,7 @@
             arrow_back_ios
           </a>
           <div class="left">
-            <h1 class="main-title">Vamos cadastrar seu novo projeto!</h1>
+            <h1 class="main-title" id="main_title"></h1>
 
             <input type="text" class="df-input" placeholder="Título" />
             <input type="text" class="df-input" placeholder="Custo Total" />
@@ -74,7 +81,7 @@
               placeholder="Descrição"
             ></textarea>
 
-            <button class="df-button">Continuar</button>
+            <button class="df-button" id="df_button"></button>
           </div>
           <div class="right">
             <img
