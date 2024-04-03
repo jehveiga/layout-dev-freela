@@ -24,7 +24,12 @@ function cadastrar(event) {
   })
   .then(response => response.json())
   .then(response => {
-    alert('Cadastrado com sucesso');
+    alert("Cadastrado com sucesso!");
+
+    localStorage.setItem("userName", response.fullName);
+    localStorage.setItem("role", response.role === 'dev' ? "Desenvolvedor" : "Cliente");
+
+    window.location.href = "list.html";
   })
   .catch(error => {
     alert('Erro no servidor');
