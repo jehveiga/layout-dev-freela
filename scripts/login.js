@@ -2,7 +2,11 @@ function cadastrar(event) {
   event.preventDefault();
 
   if (checkIfAnyRoleIsChecked === false) {
-    alert("Marque um dos perfis!");
+    Swal.fire({
+      title: "Erro",
+      text: "Marque algum perfil!",
+      icon: "error"
+    });
     return;
   }
 
@@ -24,16 +28,27 @@ function cadastrar(event) {
   })
   .then(response => response.json())
   .then(response => {
-    alert("Cadastrado com sucesso!");
-
-    localStorage.setItem("userName", response.fullName);
-    localStorage.setItem("role", response.role === 'dev' ? "Desenvolvedor" : "Cliente");
-    localStorage.setItem("idClient", response.id);
-
-    window.location.href = "list.html";
+    Swal.fire({
+      title: "Bom trabalho",
+      text: "Cadastrado com sucesso!",
+      icon: "success",
+      confirmButtonText: "Ok!"
+    }).then(result => {
+      if(result.isConfirmed){
+        localStorage.setItem("userName", response.fullName);
+        localStorage.setItem("role", response.role === 'dev' ? "Desenvolvedor" : "Cliente");
+        localStorage.setItem("idClient", response.id);
+    
+        window.location.href = "list.html";
+      }
+    });
   })
   .catch(error => {
-    alert('Erro no servidor');
+    Swal.fire({
+      title: "Erro",
+      text: "Erro no servidor!",
+      icon: "error"
+    });
   });
 }
 
