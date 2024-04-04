@@ -42,7 +42,7 @@ function createOrEdit(event) {
     title: document.querySelector("#title").value,
     description: document.querySelector("#description").value,
     totalCost: document.querySelector("#totalCost").value,
-    idClient: "1",
+    idClient: localStorage.getItem("idClient")
   };
 
   // Enviar para API

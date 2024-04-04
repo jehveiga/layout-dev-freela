@@ -40,6 +40,9 @@ function buildTable(){
     .querySelector("#table_body")
     .innerHTML = "";
 
+    const idClient =localStorage.getItem("idClient");
+
+    list = list.filter(project => project.id === idClient);
 
     list.forEach(element => {
         let template = `
